@@ -16,7 +16,7 @@ public class ProductBasket {
                 return;
             }
         }
-        System.out.println("Невозможно добавить продукт");
+        System.out.println("В корзине нет места");
     }
 
     public void printBasket() {
