@@ -23,21 +23,22 @@ public class ProductBasket {
         for (Product product : products) {
             System.out.println(product);
         }
-//        System.out.println(totalPrice());
     }
 
 
-    public int totalPrice() {
+    public int costOfTheHoleBasket() {
         int totalPrice = 0;
         for (int i = 0; i < products.length; i++) {
-            totalPrice = totalPrice + products[i].getProductPrice();
+            if (products[i] != null) {
+                totalPrice = totalPrice + products[i].getProductPrice();
+            }
         }
         return totalPrice;
     }
 
     public boolean findProductByName(String name) {
         for (int i = 0; i < products.length; i++) {
-            if (products[i].getProductName().equals(name)) {
+            if (products[i] != null && products[i].getProductName().equals(name)) {
                 return true;
             }
         }

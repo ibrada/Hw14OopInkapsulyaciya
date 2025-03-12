@@ -35,7 +35,7 @@ public class App {
         line("Добавление продукта в заполненную корзину");
         productBasket.addProduct(product5);
         line("Получение стоимости корзины");
-        System.out.println(productBasket.totalPrice());
+        System.out.println(productBasket.costOfTheHoleBasket());
         line("Поиск товара, который есть в корзине");
         System.out.println(productBasket.findProductByName("apple"));
         line("Поиск товара, которого нет в корзине");
@@ -45,9 +45,9 @@ public class App {
         line("Печать содержимого пустой корзины");
         productBasket.printBasket();
         line("Получение стоимости пустой корзины");
-//        System.out.println(productBasket.totalPrice());
+        System.out.println(productBasket.costOfTheHoleBasket());
         line("Поиск товара по имени в пустой корзине");
-//        productBasket.findProductByName("tomato");
+        System.out.println(productBasket.findProductByName("tomato"));
 
 
     }
