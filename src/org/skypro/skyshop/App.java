@@ -2,7 +2,10 @@ package org.skypro.skyshop;
 
 
 import org.skypro.skyshop.basket.ProductBasket;
+import org.skypro.skyshop.product.DiscountedProduct;
+import org.skypro.skyshop.product.FixPriceProduct;
 import org.skypro.skyshop.product.Product;
+import org.skypro.skyshop.product.SimpleProduct;
 
 public class App {
 
@@ -14,12 +17,12 @@ public class App {
 
         ProductBasket productBasket = new ProductBasket();
 
-        Product product = new Product("banana", 100);
-        Product product1 = new Product("apple", 80);
-        Product product2 = new Product("grape", 120);
-        Product product3 = new Product("tomato", 90);
-        Product product4 = new Product("bread", 50);
-        Product product5 = new Product("cherry", 70);
+        Product product = new SimpleProduct("banana", 100);
+        Product product1 = new SimpleProduct("apple", 80);
+        Product product2 = new DiscountedProduct("grape", 120, 10);
+        Product product3 = new DiscountedProduct("tomato", 90, 20);
+        Product product4 = new FixPriceProduct("bread");
+        Product product5 = new FixPriceProduct("cherry");
 
         line("Добавление продукта в корзину");
         productBasket.addProduct(product);
@@ -48,6 +51,7 @@ public class App {
         System.out.println(productBasket.costOfTheHoleBasket());
         line("Поиск товара по имени в пустой корзине");
         System.out.println(productBasket.findProductByName("tomato"));
+
 
 
     }
