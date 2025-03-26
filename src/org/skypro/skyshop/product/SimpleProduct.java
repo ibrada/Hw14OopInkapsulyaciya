@@ -15,6 +15,12 @@ public class SimpleProduct extends Product {
     }
 
     @Override
+    public boolean isSpecial() {
+        return false;
+    }
+
+
+    @Override
     public String toString() {
         return "Имя продукта " + getName() + ", стоимость " + price;
     }

@@ -16,6 +16,11 @@ public class DiscountedProduct extends Product {
         return basePrise - basePrise * discount / 100;
     }
 
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
     public int getBasePrise() {
         return basePrise;
     }

@@ -22,6 +22,7 @@ public class ProductBasket {
             System.out.println(product);
         }
         System.out.println("Общая стоимость корзины " + costOfTheHoleBasket());
+        System.out.println("Специальных товаров " + countSpecial() );
     }
 
 
@@ -36,6 +37,16 @@ public class ProductBasket {
             System.out.println("В корзине пусто");
         }
         return totalPrice;
+    }
+
+    public int countSpecial() {
+        int count = 0;
+        for (int i = 0; i < products.length; i++) {
+            if (products[i] != null && products[i].isSpecial()) {
+                count = count + 1;
+            }
+        }
+        return count;
     }
 
     public boolean findProductByName(String name) {
